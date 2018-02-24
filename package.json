@@ -1,0 +1,25 @@
+{
+  "name": "wx_sdk_tasks",
+  "version": "1.0.0",
+  "description": "微信开放的sdk的测试实例集合，有助于基于Js开发的开发者对照学习与使用",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnharvy/wx_sdk_tasks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johnharvy/wx_sdk_tasks/issues"
+  },
+  "homepage": "https://github.com/Johnharvy/wx_sdk_tasks#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-htmlone": "^0.1.9",
+    "gulp-sftp": "^0.1.5"
+  }
+}

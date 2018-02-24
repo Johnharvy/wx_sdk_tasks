@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信sdk</title>
+    <script keep="" src="../js/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <h1>
+            微信sdk
+        </h1>
+    </div>
+    <div class="sdk">
+          <ul>
+              <li>获取信息</li>
+              <li>分享</li>
+              <li>付款</li>
+          </ul>
+    </div>
+    <script>
+       var lis = $("div.sdk ul li")
+       var pagesMap = {
+           0 : 'infor.html',
+           1 : 'share.html',
+           2 : 'pay.html'
+       }
+       lis.on('click',function(){
+           var _index = $(this).index()
+           location.href = pagesMap[_index]
+       })
+
+    </script>
+</body>
+</html>
