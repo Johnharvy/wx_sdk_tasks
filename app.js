@@ -4,22 +4,17 @@ var app = express()
 var path = require('path')
 var fs = require('fs')
 
+
 app.use(express.static(path.resolve(__dirname,'weixin')))
 
+var weixinAction = require('./server/weixin.js')
 
-module.exports = app
+//验证微信开发测试账号申请时的接口
+weixinAction.examWxAction()
 
-var baseUrl = "./server/"; //接口根目录
-//同步读取文件下的方法
-fs.readdirSync(baseUrl).forEach(function(fdir){
-  var Actions = {};
-  Actions[fdir] = require(baseUrl + fdir.slice(0,-3));
-  Object.keys(Actions[fdir]).forEach(function(item){
-        Actions[fdir][item]();
-  });
-})
+//管理票据生成签名并返回签名等信息给前端
+weixinAction.getTicket()
 
-
-http.createServer(app).listen(5000,function(){
-     console.log('//localhost:5000/')
+http.createServer(app).listen(80,function(){
+  console.log('Server running at port:'+ '80'); 
 })

@@ -4,7 +4,8 @@
   "description": "微信开放的sdk的测试实例集合，有助于基于Js开发的开发者对照学习与使用",
   "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "push": "gulp push"
   },
   "repository": {
     "type": "git",
