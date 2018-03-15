@@ -41,31 +41,14 @@
 
 
                  wx.ready(function () {
-                        wx.onMenuShareTimeline({
-                                title: '你好',
-                                desc:  '这是介绍',
-                                link:  'http://ycccz.com/src/html/login.html',
-                                imgUrl: 'http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520783585485&di=513aff9c9c3348114cf1fb2f5188b904&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20150820%2Ftooopen_sy_139205349641.jpg',
-                                success: function () {
-                                 alert('成功')
-                            },
-                        cancel: function () {
-                           alert('失败')
-                        }
-                        });
-                            
-                         wx.onMenuShareAppMessage({
-                            title: '你好',
-                            desc:  '这是介绍',
-                            link:  'http://ycccz.com/src/html/login.html',
-                            imgUrl: 'http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520783585485&di=513aff9c9c3348114cf1fb2f5188b904&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20150820%2Ftooopen_sy_139205349641.jpg',
-                            success: function () {
-                           alert('成功')
-                        },
-                        cancel: function () {
-                           alert('失败')
-                        }
-                            });
+                    wx.scanQRCode({
+                        needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+                        scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                            success: function (res) {
+                                var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                                alert('操作成功') 
+                            }
+                       })
                  })
 
 
