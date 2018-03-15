@@ -21,6 +21,7 @@
     "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-htmlone": "^0.1.9",
-    "gulp-sftp": "^0.1.5"
+    "gulp-sftp": "^0.1.5",
+    "request": "^1.9.9"
   }
 }

@@ -1,6 +1,6 @@
 var express = require("express");
 var http = require("http");
-var app = require("../../app");
+var app = require("../app");
 var url = require("url");
 var crypto = require("crypto");
 var request = require('request')

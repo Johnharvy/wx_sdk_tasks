@@ -7,6 +7,8 @@ var fs = require('fs')
 
 app.use(express.static(path.resolve(__dirname,'weixin')))
 
+module.exports = app
+
 var weixinAction = require('./server/weixin.js')
 
 //验证微信开发测试账号申请时的接口
