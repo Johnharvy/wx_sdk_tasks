@@ -15,6 +15,6 @@ weixinAction.examWxAction()
 //管理票据生成签名并返回签名等信息给前端
 weixinAction.getTicket()
 
-http.createServer(app).listen(80,function(){
-  console.log('Server running at port:'+ '80'); 
+http.createServer(app).listen(3003,function(){
+  console.log('Server running at port:'+ '3003'); 
 })
